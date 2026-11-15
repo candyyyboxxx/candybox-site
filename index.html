@@ -28,11 +28,18 @@ blockquote p:last-child{margin:0}
 a{color:var(--amber)}
 .back{display:inline-block;margin-bottom:26px;font-size:14px;font-weight:700;text-decoration:none}
 .home h2{border-top:none;padding-top:0}
+/* ロゴ。暗い地では文字がクリームの版に入れ替わる（下の <picture>）。
+   ★ カラー版を暗い地に出さないこと。文字が #230902 で地が #17120E、
+   ほぼ同じ色になって読めなくなる。 */
+.logo{margin:0 0 10px}
+.logo img{display:block;height:48px;width:auto}
 .doclink{display:block;padding:18px 20px;margin:0 0 12px;background:var(--card);
  border:2.5px solid var(--ink);border-radius:16px;text-decoration:none;color:var(--ink);font-weight:700}
 .doclink span{display:block;font-weight:400;font-size:14px;color:var(--sub);margin-top:4px}
 </style></head>
-<body><div class="wrap"><div class="home"><h1>candybox</h1>
+<body><div class="wrap"><div class="home"><h1 class="logo"><picture>
+<source media="(prefers-color-scheme:dark)" srcset="./logo-dark.png">
+<img src="./logo-color.png" alt="candybox" width="783" height="200"></picture></h1>
 <p class="meta">月に一度、ひらく。それだけのアプリです。</p>
 <a class="doclink" href="./terms.html">利用規約<span>グループ・投稿・開くタイミング・禁止事項</span></a>
 <a class="doclink" href="./privacy.html">プライバシーポリシー<span>何を集めて、何に使い、いつ消すのか</span></a>
